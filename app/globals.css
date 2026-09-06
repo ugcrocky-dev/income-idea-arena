@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #e8f1f0;
+  --ink: #10241f;
+  --muted: #3d5c54;
+  --accent: #0f7a6c;
+  --accent-2: #c45c26;
+  --panel: rgba(255, 255, 255, 0.72);
+  --line: rgba(16, 36, 31, 0.12);
+  --glow: rgba(15, 122, 108, 0.18);
+  --panel: var(--panel);
+  --line: var(--line);
+  --glow: var(--glow);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-body), Georgia, serif;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(15, 122, 108, 0.22), transparent 55%),
+    radial-gradient(900px 500px at 90% 0%, rgba(196, 92, 38, 0.14), transparent 50%),
+    linear-gradient(165deg, #dfeceb 0%, #eef4f2 45%, #f7f3ea 100%);
+  background-attachment: fixed;
+}
+
+@keyframes rank-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-rail {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes score-fill {
+  from {
+    width: 0%;
+  }
+}
+
+.rank-in {
+  animation: rank-in 0.45s ease both;
+}
+
+.slide-rail {
+  animation: slide-rail 0.35s ease both;
+}
+
+.score-fill {
+  animation: score-fill 0.55s ease both;
+}
