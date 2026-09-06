@@ -1,1 +1,1 @@
-PLACEHOLDER
+[{"id":"idea-001","name":"Kalshi Paper Lab","lane":"trading","blurb":"Clone Polymarket lab for Kalshi public markets","capital":"low","effort":"M","timeToCash":"weeks","automatable":5,"stackFit":5,"staticScore":87,"liveSignals":["polymarket_volume"],"buildHint":"Clone Polymarket lab for Kalshi public markets"}]
